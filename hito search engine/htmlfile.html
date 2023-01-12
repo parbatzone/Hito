@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Hito</title>
+    </head>
+    <body>
+        <div id="logo">
+            <img src="Pictures/hitologo.jpg" alt="Hito logo">
+          </div>
+        <div id="search-container">
+            <form>
+              <input type="text" id="search-box" placeholder="Search in Hito...">
+              <button type="submit" id="search-button">Search</button>
+            </form>
+            <div id="search-results"></div>
+            <div id="search-nav">
+              <a href="#">Advanced Search</a>
+              <a href="#">Search History</a>
+            </div>
+          </div>
+          <style>
+           
+
+#search-box {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-button {
+  width: 20%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-results {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#search-nav {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#search-nav a {
+  margin-right: 10px;
+}
+          </style>
+          <script>
+            const searchButton = document.getElementById("search-button");
+const searchBox = document.getElementById("search-box");
+const searchResults = document.getElementById("search-results");
+
+searchButton.addEventListener("click", function(e) {
+    e.preventDefault();
+    searchResults.innerHTML = `Search results for ${searchBox.value}:`;
+});
+          </script>
+    </body>
+</html>
